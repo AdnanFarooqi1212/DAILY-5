@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+header{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    color: white;
+}
+.logo{
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #00008b;
+    font-size: 32px;
+    margin-left: 12rem;
+}
+.logo span{
+    color: #8f0b8f;
+    font-weight: lighter;
+}
+nav{
+    margin-right: 12rem;
+}
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 30px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+nav a:hover{
+    color: #00008b;
+    cursor: pointer;
+}
+.login{
+    background-color: #ffffff;
+    border: 1px solid #c1bfbf;
+    padding: 8px 25px;
+    font-weight: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.login:hover{
+    background-color: #0056a8;
+    cursor: pointer;
+    color: #ffffff;
+}
+body{
+    background-color: #f3f3f3;
+}
+.container{
+    max-width: 500px;
+    margin: 60px auto;
+    text-align: center;
+}
+h1{
+    font-size: 42px;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+input, select{
+    width: 100.4%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #1a1a1a;
+    outline: none;
+}
+input::placeholder{
+    color: #1a1a1a;
+    font-weight: bold;
+}
+select{
+    color: #1a1a1a;
+    font-weight: bold;
+    width: 107%;
+    appearance: #1a1a1a;
+}
+.select-wrapper{
+    position: relative;
+}
+.submit-btn{
+    margin-top: 10px;
+    background-color: #902070;
+    color: #ffffff;
+    border: none;
+    width: 106.8%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.footer {
+    background-color: #1a1a1a;
+    color: #888;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 2px;
+}
+.footer-links {
+    font-size: 11px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.copyright {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+</style>
+<body>
+    <!--header section-->
+     <header>
+        <div class="logo">DAILY<span>5</span>
+        </div>
+        <nav>
+            <a href="#">ABOUT</a>
+            <a href="#">CHALLENGE SOMEONE YOU LOVE</a>
+            <button class="login">LOGIN</button>
+        </nav>
+    </header>
+    <!--form section-->
+    <main class="container">
+        <h1>GET STARTED</h1>
+        <form class="signup-form">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <div class="select-wrapper">
+            <select required>
+                 <option value="">Birth Year </option>
+                <!--2001 to 2015-->
+            <option value="2001">2001</option> ,<option value="2002">2002</option> ,<option value="2003">2003</option> ,<option value="2004">2004</option> ,<option value="2005">2005</option> ,<option value="2006">2006</option> ,<option value="2007">2007</option> ,<option value="2008">2008</option> ,<option value="2009">2009</option> ,<option value="2010">2010</option> ,<option value="2011">2011</option> ,<option value="2012">2012</option>,<option value="2013">2013</option>,<option value="2014">2014</option> ,<option value="2015">2015</option>
+                <!--2016 to 2026-->
+            ,<option value="2016">2016</option>,<option value="2017">2017</option>,<option value="2018">2018</option> ,<option value="2019">2019</option> ,<option value="2020">2020</option> ,<option value="2021">2021</option> ,<option value="2022">2022</option> ,<option value="2023">2023</option> ,<option value="2024">2024</option> ,<option value="2025">2025</option> ,<option value="2026">2026</option>
+                </select>
+            </div>
+    <div class="select-wrapper">
+            <select required>
+                <option value="">Gender</option>
+                ,<option value="Male">Male</option>,
+                <option value="female">Female</option>
+                <option value="">Rather not say</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">SUBMIT</button>
+        </form>
+    </main>
+    <!--footer section-->
+  <footer class="footer">
+        <div class="social-icons">
+            <div class="icon">f</div>
+            <div class="icon">t</div>
+            <div class="icon">in</div>
+        </div>
+        <div class="footer-links">
+            <a href="#">HOME</a> | 
+            <a href="#">ABOUT</a> | 
+            <a href="#">HOW IT WORKS</a> | 
+            <a href="#">PRICING</a> | 
+            <a href="#">TERM OF SERVICES</a> | 
+            <a href="#">PRIVACY POLICY</a> | 
+            <a href="#">CONTACT</a>
+        </div>
+        <p class="copyright">COPYRIGHT 2015, ALL RIGHT RESERVED</p>
+    </footer>
+</body>
+</html>
