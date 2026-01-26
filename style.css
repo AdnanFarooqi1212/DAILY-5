@@ -8,7 +8,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 40px;
+    padding: 12px 10%;
     color: white;
 }
 .logo{
@@ -50,6 +50,25 @@ nav a:hover{
     cursor: pointer;
     color: #ffffff;
 }
+
+.next-btn{
+     background: #00008b;
+    color: white;
+    display: flex;
+    width: 10rem;
+    margin-top: 8px;
+    margin-left: 20rem;
+    justify-content: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.next-btn:hover{
+    cursor: pointer;
+    background-color: #912174;
+    color: #1d1d1d;
+}
 .hero{
     background: url(backgorund.jpg);
     background-size: cover;
@@ -82,22 +101,7 @@ nav a:hover{
     font-family: sans-serif;
     font-weight: lighter;
 }
-.btn-log{
-    color: #ffffff;
-    margin-top: 12px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 1px, rgba(0,0,0,0.05) 1px, rgba(0,0,0,0.05) 2px);
-    font-weight: bold;
-    font-family: sans-serif;
-     background-color: #00008b;
-     border: none;
-}
-.btn-log:hover{
-    background-color: #b02578;
-    color: goldenrod;
-    cursor: pointer;
-}
+
 .why{
     /* width: 100%; */
     padding: 60px 60px;
@@ -427,20 +431,5 @@ nav a:hover{
   justify-content: center;  /* horizontal center */
   align-items: center;
   margin: 30px 0;
-}
-
-.next-btn{
-  background: #00008b;
-  color: white;
-  padding: 15px 40px;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 6px;
-}
-.next-btn:hover{
-    cursor: pointer;
-    background-color: #912174;
-    color: #1d1d1d;
 }
 
