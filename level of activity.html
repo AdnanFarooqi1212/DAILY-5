@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>LEVEL of Activity</title>
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif ;
+  background-color: #f3f3f3;
+}
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            background-color: #ffffff;
+        }
+        .logo{
+            font-size: 28px;
+            letter-spacing:1px;
+            color: #4a90e9;
+            background-color:#ffffff;
+        }
+        .logo span{
+            color: #a3278a;
+             background-color:#ffffff;
+        }
+        nav{
+            margin-right: 12rem;
+             background-color:#ffffff;
+        }
+        nav a{
+            margin-right: 30px;
+            color: black;
+             background-color:#ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav a:hover{
+            color: #4a90e9;
+            cursor: pointer;
+        }
+        .login{
+            background-color: #ffffff;
+            border: 1px solid #c1bfbf;
+            padding: 10px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .login:hover{
+            background-color: #4a90e9;
+            color: #fff;
+        }
+        /* main */
+.wrapper{
+ margin:60px auto;
+ width: 900px;
+        }
+        h1{
+            font-weight: 300;
+            color: #1b1b1b;
+            font-size: 42px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        .desc{
+            color: #1b1b1b;
+            margin-bottom: 35px;
+        }
+        .blue{
+            color: #0552a2;
+            font-weight: 600;
+            font-size:20px;
+            margin-bottom: 20px;
+        }
+        /* <!--Cards--> */
+.cards{
+  display:flex;
+  gap:25px;
+}
+.card{
+  width:190px;
+  text-align:center;
+}
+.box {
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+.box:hover {
+  transform: translateX(20px);
+  cursor: pointer;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.1); 
+}
+.box{
+  height:185px;
+  background:#9e9e9e;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:10px;
+  border:4px solid #ffffff;
+}
+.box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.empty{
+  background:#bdbdbd;
+}
+.active .box{
+  border-color:#dcdcdc;
+}
+.card h3{
+  font-size:15px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+.card p{
+  font-size:12px;
+  color:#666;
+  line-height:1.4;
+}
+/* BUTTON */
+
+.next button{
+  border:none;
+  margin-top: 40px;
+  padding:14px 70px;
+  font-size:16px;
+  color:#fff;
+  letter-spacing:1px;
+  cursor:pointer;
+  background-color: #9b1b78;
+}
+.next button:hover{
+  background-color: #4a90e9;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+}
+.footer {
+    background-color: #1a1a1a;
+    color: #888;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    background-color: #1b1b1b;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 2px;
+}
+.footer-links {
+    font-size: 11px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    background-color: #1b1b1b;
+}
+.link-tag {
+  background-color: #1b1b1b;
+}
+.footer-links a {
+    color: #ccc;
+    background-color:#1b1b1b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer-links a:hover{
+  cursor: pointer;
+  color: #9b1b78;
+  font-weight: 500;
+}
+.copyright {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #1b1b1b;
+}
+
+
+</style>
+<body>
+    <header>
+        <div class="logo">DAILY<span>5</span></div>
+        <nav>
+          <a href="#">ABOUT</a>
+          <a href="#">CHALLENGE SOMEONE YOU LOVE</a>
+          <button type="button" class="login">LOGIN</button>
+        </nav>
+    </header>
+  <div class="wrapper">
+          <h1>LET’S GET STARTED</h1>
+  <div class="desc">
+    So that we can customize this challenge to best fit you, please answer a few quick questions:
+  </div>
+  <!--content-section-->
+  <div class="blue">Level of activity?</div>
+  <div class="cards">
+    <!-- PIC 1 -->
+    <div class="card">
+    <div class="box">
+    <img src="pretty-active.png" alt="">
+      </div>
+    <h3>Pretty inactive</h3>
+    <p>I rarely exercise or engage in fitness activities</p>
+    </div>
+    <!-- PIC 2 -->
+    <div class="card">
+    <div class="box">
+    <img src="somewhat-active.png" alt="">
+      </div>
+    <h3>Somewhat active</h3>
+    <p>I exercise once or twice a week, but not always consistently</p>
+    </div>
+    <!-- EMPTY -->
+    <div class="card">
+    <div class="box empty">
+    <img src="Active.png" alt="">
+      </div>
+    <h3>Active</h3>
+    <p>I make an effort to exercise and be active several times per week</p>
+    </div>
+    <!-- EMPTY -->
+    <div class="card">
+    <div class="box empty"><img src="very-active.png" alt=""></div>
+    <h3>Very active</h3>
+    <p>I make an effort to exercise and be active several times per week</p>
+    </div>
+  </div>
+  <!--button-->
+  <div class="next">
+    <button>NEXT</button>
+  </div>
+</div>
+<!--footer section-->
+<footer class="footer">
+    <div class="social-icons">
+        <div class="icon">f</div>
+        <div class="icon">t</div>
+        <div class="icon">in</div>
+    </div>
+    <div class="link-tag">
+        <div class="footer-links">
+            <a href="#">HOME</a> | 
+            <a href="#">ABOUT</a> | 
+            <a href="#">HOW IT WORKS</a> | 
+            <a href="#">PRICING</a> | 
+            <a href="#">TERM OF SERVICES</a> | 
+            <a href="#">PRIVACY POLICY</a> | 
+            <a href="#">CONTACT</a>
+        </div>
+        <p class="copyright">COPYRIGHT 2015, ALL RIGHT RESERVED</p>
+    </div>
+
+</footer>
+
+
+</body>
+</html>
