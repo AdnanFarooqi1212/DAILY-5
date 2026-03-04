@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily5 - Height and Weight</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f3f3f3;
+    }
+    header{
+        background-color:#ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 40px;
+    }
+    .logo{
+        font-size: 32px;
+        font-weight: lighter;
+        color: #00008b;
+        background-color: #ffffff;
+        margin-left: 12rem;
+    }
+    .logo span{
+        color: #8f0b8f;
+        background-color: #ffffff;
+        font-weight: lighter;
+    }
+    nav{
+        margin-right: 12rem;
+        background-color: #ffffff;
+        
+    }
+    nav a{
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 34px;
+      font-size: 16px;
+      background-color: #ffffff;
+      color: black;
+    }
+    nav a:hover{
+        color: #00008b;
+        cursor: pointer;
+    }
+    .login-btn{
+        padding: 8px 25px;
+        background-color: #ffffff;
+        color: black;
+        cursor: pointer;
+        font-family: sans-serif;
+        font-weight: 600;
+        border: 1px solid #c1bfbfbf;
+    }
+    .login-btn:hover{
+        background-color: #0056a8;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    .container{
+        max-width: 1100px;
+        margin: 118px auto;
+        padding: 0 20px;
+        width: 100%;
+    }
+    .question-little{
+        color: #1a5a96;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    .input{
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .select-group{
+        position: relative;
+        width: 100%;
+    }
+    .select{
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        cursor: pointer;
+    }
+    .custom-arrow{
+        position: absolute;
+        width: 25px;
+        height: 50%;
+        margin: 15px 12px;
+        background-color: #f0f0f0;
+        border-left: 1px solid #ddd;
+        right: 0;
+        top: 0;
+        left: 360px;
+        pointer-events: none;
+    }
+    .custom-arrow::after{
+         content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #aaa;
+    }
+    .next-btn{
+        border: none;
+        margin-top: 20px;
+        width: 215px;
+        padding: 15px 80px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+        background: #9d2673;
+         background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.1) 2px,
+        rgba(0, 0, 0, 0.1) 4px
+    );
+    }
+    .next-btn:hover{
+        cursor: pointer;
+        color: #888;
+        background: #0056a8;
+         background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.1) 2px,
+        rgba(0, 0, 0, 0.1) 4px
+    );
+    }
+  .footer {
+    background-color: #1a1a1a;
+    color: #888;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    background-color: #1b1b1b;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background: white;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 2px;
+}
+.footer-links {
+    font-size: 11px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    background-color: #1b1b1b;
+}
+.link-tag {
+  background-color: #1b1b1b;
+}
+.footer-links a {
+    color: #ccc;
+    background-color:#1b1b1b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.footer-links a:hover{
+  cursor: pointer;
+  color: #9b1b78;
+  font-weight: 500;
+}
+.copyright {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #1b1b1b;
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">Daily<span>5</span></div>
+        <nav>
+            <a href="#">ABOUT</a>
+            <a href="#">CHALLENGE SOMEONE YOU LOVE</a>
+             <button type="submit" class="login-btn">LOGIN</button>
+        </nav>
+    </header>
+    <main class="container">
+        <h2 class="question-little">Tell us about your height and weight?</h2>
+
+        <form class="input">
+            <div class="select-group">
+                <select name="height" class="select" required>
+                    <option value="" disabled selected>Height</option>
+                    <option value="5-12">5'0"</option>
+                    <option value="5-1">5'1"</option>
+                    <option value="5-2">5'2"</option>
+                    <option value="5-3">5'3"</option>
+                    <option value="5-4">5'4"</option>
+                    <option value="5-5">5'5"</option>
+                    <option value="5-6">5'6"</option>
+                    <option value="5-7">5'7"</option>
+                    <option value="5-8">5'8"</option>
+                    <option value="5-9">5'9"</option>
+                    <option value="5-10">5'10"</option>
+                    <option value="5-11">5'11"</option>
+                    <option value="5-12">5'12"</option>
+                    <option value="6-6">6'0"</option>
+                    <option value="6-1">6'1"</option>
+                    <option value="6-2">6'2"</option>
+                    <option value="6-3">6'3"</option>
+                    <option value="6-4">6'4"</option>
+                    <option value="6-5">6'5"</option>
+                </select>
+                   <div class="custom-arrow"></div>
+            </div>
+
+
+              <div class="select-group">
+                <select name="weight" class="select" required>
+                    <option value="" disabled selected>Weight</option>
+                    <option value="150">150 lbs</option>
+                    <option value="160">160 lbs</option>
+                    <option value="170">170 lbs</option>
+                </select>
+                <div class="custom-arrow"></div>
+            </div>
+             <button type="submit"  class="next-btn" >NEXT</button>
+        </form>
+    </main>
+    
+    <!--footer section-->
+<footer class="footer">
+    <div class="social-icons">
+        <div class="icon">f</div>
+        <div class="icon">t</div>
+        <div class="icon">in</div>
+    </div>
+    <div class="link-tag">
+        <div class="footer-links">
+            <a href="#">HOME</a> | 
+            <a href="#">ABOUT</a> | 
+            <a href="#">HOW IT WORKS</a> | 
+            <a href="#">PRICING</a> | 
+            <a href="#">TERM OF SERVICES</a> | 
+            <a href="#">PRIVACY POLICY</a> | 
+            <a href="#">CONTACT</a>
+        </div>
+        <p class="copyright">COPYRIGHT 2026, ALL RIGHT RESERVED</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
